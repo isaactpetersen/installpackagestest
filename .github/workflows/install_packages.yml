@@ -28,6 +28,9 @@ jobs:
         run: |
          Rscript -e 'install.packages("remotes")'
          Rscript -e 'remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")'
-         Rscript -e "remotes::install_github('evwalz/uroc')"
-         Rscript -e "remotes::install_github('ddueber/dmacs')"
-         Rscript -e "remotes::install_deps(dependencies = TRUE)"
+         #Rscript -e "remotes::install_github('evwalz/uroc')"
+         #Rscript -e "remotes::install_github('ddueber/dmacs')"
+         #Rscript -e "remotes::install_deps(dependencies = TRUE)"
+
+      - name: Install package dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2 # update
