@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3 # update
+
+      - name: Update package database
+        sudo apt-get update
       
       - name: Session info
         run: Rscript -e 'sessionInfo()'
